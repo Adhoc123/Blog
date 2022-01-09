@@ -22,6 +22,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/blog', [PostsController::class, 'index'])->name('blog');
 Route::get('/blog/create', [PostsController::class, 'create'])->name('blog');
 Route::post('/blog/store', [PostsController::class, 'store'])->name('blog');
-Route::get('/blog/{$slug}', [PostsController::class, 'show'])->name('blog.show');
+Route::get('/blog/{slug}', [PostsController::class, 'show'])->name('blog.show');
 
 
