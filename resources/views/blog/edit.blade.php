@@ -10,20 +10,20 @@
     </div>
     <div class="w-4/5 m-auto pt-20">
         <form
-            action="/blog/{{$post->slug}}"
+            action="/blog/{{$post->slug}}/update"
             method="POST"
             enctype="multipart/form-data">
             @csrf
-            @method('PUT')
+            @method('POST')
             <input
                 type="text"
                 name="title"
-                placeholder="Title..."
+                value="{{$post->title}}"
                 class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
             <textarea
                 name="description"
                 placeholder="Description..."
-                class="py-20 bg-transparent block border-b-2 w-full h-60 text-6xl outline-none"></textarea>
+                class="py-20 bg-transparent block border-b-2 w-full h-60 text-6xl outline-none">{{$post->description}}</textarea>
             <div class="bg-gray-lighter pt-15">
                 <label class="w-44 flex flex-col items-center px-2 py-3 bg-white-rounded-lg shadow-lg
                    tracking-wide uppercase border border-blue cursor-pointer">
